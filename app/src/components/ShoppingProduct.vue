@@ -7,6 +7,13 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+defineProps({
+  product: {
+    type: Object,
+    required: true,
+  },
+})
+</script>
 
 <style scoped></style>
