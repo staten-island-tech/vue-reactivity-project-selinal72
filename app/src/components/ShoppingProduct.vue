@@ -2,6 +2,7 @@
   <div>
     <h3>{{ product.name }}</h3>
     <h4>{{ product.price }}</h4>
+    <img :src="product.image"" alt=""/>
     <button>buy</button>
     <button>sell</button>
   </div>
