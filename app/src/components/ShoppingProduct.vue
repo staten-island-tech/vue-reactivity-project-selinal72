@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="card">
     <h3>{{ product.name }}</h3>
     <h4>{{ product.price }}</h4>
-    <img :src="product.image"" alt=""/>
-    <button>buy</button>
-    <button>sell</button>
+    <img :src="product.image" alt="" />
+    <button @click="buy">buy</button>
+    <button @click="sell">sell</button>
   </div>
 </template>
 
@@ -18,13 +18,24 @@ defineProps({
 </script>
 
 <style scoped>
-div {
+.card {
+  min-width: 250px;
+  width: 22%;
+  height: 30rem;
+  margin: 3rem 0;
+  border: 2px solid white;
+  border-radius: 10px;
+  box-shadow: white 0px 1px 40px;
+
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
-  height: 200px;
-  width: 150px;
-  border: 3px solid black;
+  justify-content: space-around;
+  transition: all 0.5s;
+}
+
+img {
+  width: 300px;
+  max-height: 300px;
 }
 </style>

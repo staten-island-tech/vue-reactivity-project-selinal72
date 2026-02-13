@@ -9,19 +9,19 @@
 <script setup>
 import ShoppingProduct from '@/components/ShoppingProduct.vue'
 import { ref } from 'vue'
-let money = ref(841100000000)
+
 const products = [
   {
     name: 'end homelessness in the us',
     price: 30000000000,
     max: 1,
-    image: '/homeless.png',
+    image: './homeless.png',
   },
   {
     name: 'cruise ship',
     price: 930000000,
     max: 50,
-    image: '/cruise ship.avif',
+    image: './cruise ship.avif',
   },
   {
     name: 'skyscraper',
@@ -45,7 +45,7 @@ const products = [
     name: 'helicopter',
     price: 31000000,
     max: 100,
-    image: '/helicopter.png',
+    image: '/helicopter.webp',
   },
   {
     name: 'yacht',
@@ -87,7 +87,7 @@ const products = [
     name: 'rolex',
     price: 15000,
     max: 1000,
-    image: '/rolex.png',
+    image: '/rolex.webp',
   },
   {
     name: 'jet ski',
@@ -162,6 +162,16 @@ const products = [
     image: '/jordans.avif',
   },
 ]
+
+let money = ref(841100000000)
+
+function buy(price) {
+  money -= price
+}
+
+function sell(price) {
+  money += price
+}
 </script>
 
 <style scoped>
@@ -172,24 +182,5 @@ div {
 h1 {
   text-align: center;
   margin-bottom: 20px;
-}
-.container {
-  display: flex;
-  width: 80vw;
-  margin: 20px auto;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.card {
-  border: 1px solid #ccc;
-  padding: 12px;
-  margin-bottom: 12px;
-  border-radius: 6px;
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
 }
 </style>
