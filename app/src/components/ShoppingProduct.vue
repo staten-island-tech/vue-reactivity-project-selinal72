@@ -3,8 +3,8 @@
     <h3>{{ product.name }}</h3>
     <h4>{{ product.price }}</h4>
     <img :src="product.image" alt="" />
-    <button @click="buy">buy</button>
-    <button @click="sell">sell</button>
+    <button @click="store.buy(product.price)">buy</button>
+    <button @click="store.sell(product.price)">sell</button>
   </div>
 </template>
 
@@ -15,6 +15,7 @@ defineProps({
     required: true,
   },
 })
+import { store } from '@/store/store.js'
 </script>
 
 <style scoped>
