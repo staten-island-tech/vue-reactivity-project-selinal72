@@ -3,8 +3,8 @@
     <h3>{{ product.name }}</h3>
     <h4>{{ product.price }}</h4>
     <img :src="product.image" alt="" />
-    <button @click="store.buy(product.price)">buy</button>
-    <button @click="store.sell(product.price)">sell</button>
+    <button @click="store.buy(product.price, product.max, product.amount)">buy</button>
+    <button @click="store.sell(product.price, product.amount)">sell</button>
   </div>
 </template>
 
