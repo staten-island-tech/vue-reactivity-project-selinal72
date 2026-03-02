@@ -2,16 +2,17 @@
   <h1>spend all of elon musk's money</h1>
   <h2>{{ store.money }} dollaroos</h2>
   <div class="grid grid-cols-4 gap 4">
-    <ShoppingProduct v-for="product in products" :key="product.name" :product="product" />
+    <ShoppingProduct v-for="(index, product) in products" :key="product.name" :product="product" />
   </div>
 </template>
 
 <script setup>
 import ShoppingProduct from '@/components/ShoppingProduct.vue'
 import { ref } from 'vue'
+import { reactive } from 'vue'
 import { store } from '@/store/store.js'
 
-const products = [
+const products = reactive([
   {
     name: 'end homelessness in the us',
     price: 30000000000,
@@ -187,7 +188,7 @@ const products = [
     image: '/jordans.avif',
     amount: 0,
   },
-]
+])
 </script>
 
 <style scoped>
