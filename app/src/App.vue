@@ -2,7 +2,7 @@
   <h1>spend all of elon musk's money</h1>
   <h2>{{ store.money }} dollaroos</h2>
   <div class="grid grid-cols-4 gap 4">
-    <ShoppingProduct v-for="(index, product) in products" :key="product.name" :product="product" />
+    <ShoppingProduct v-for="(product, index) in products" :key="product.name" :product="product" />
   </div>
 </template>
 

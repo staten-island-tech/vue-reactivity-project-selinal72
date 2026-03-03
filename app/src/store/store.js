@@ -3,19 +3,19 @@ import { reactive } from 'vue'
 export const store = reactive({
   money: 841100000000,
   buy(product) {
-    if (amount < max) {
+    if (product.amount < product.max) {
       this.money -= price
-      amount++
-      console.log(amount)
+      product.amount++
+      console.log(product.amount)
     } else {
       console.log('maxed out')
     }
   },
-  sell(price, amount) {
-    if (amount > 0) {
-      this.money += price
-      amount--
-      console.log(amount)
+  sell(product) {
+    if (product.amount > 0) {
+      this.money += product.price
+      product.amount--
+      console.log(product.amount)
     } else {
       console.log('nothing to sell')
     }

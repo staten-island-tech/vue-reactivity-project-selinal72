@@ -4,7 +4,7 @@
     <h4>{{ product.price }}</h4>
     <img :src="product.image" alt="" />
     <button @click="store.buy(product)">buy</button>
-    <button @click="store.sell(product.price, product.amount)">sell</button>
+    <button @click="store.sell(product)">sell</button>
   </div>
 </template>
 
