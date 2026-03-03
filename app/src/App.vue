@@ -1,9 +1,14 @@
 <template>
-  <h1>spend all of elon musk's money</h1>
-  <h2>{{ store.money }} dollaroos</h2>
-  <div class="grid grid-cols-4 gap 4">
-    <ShoppingProduct v-for="(product, index) in products" :key="product.name" :product="product" />
-  </div>
+  <body>
+    <h1>spend all of elon musk's money</h1>
+    <h2>{{ store.money }} dollaroos</h2>
+    <ul class="product-grid">
+      <li v-for="(product, index) in products" :key="product.name">
+        <ShoppingProduct :product="product" />
+      </li>
+    </ul>
+    <div class="grid grid-cols-4 gap 4"></div>
+  </body>
 </template>
 
 <script setup>
@@ -199,5 +204,24 @@ div {
 h1 {
   text-align: center;
   margin-bottom: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.product-grid {
+  display: flex;
+  width: 80vw;
+  margin: 20px auto;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+body {
+  background-image: url('/starrybg.png');
+  color: #023173;
 }
 </style>
