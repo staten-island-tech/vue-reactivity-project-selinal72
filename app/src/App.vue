@@ -2,12 +2,11 @@
   <body>
     <h1>spend all of elon musk's money</h1>
     <h2>{{ store.money }} dollaroos</h2>
-    <ul class="product-grid">
-      <li v-for="(product, index) in products" :key="product.name">
+    <div class="product-grid">
+      <li v-for="product in products" :key="product.name">
         <ShoppingProduct :product="product" />
       </li>
-    </ul>
-    <div class="grid grid-cols-4 gap 4"></div>
+    </div>
   </body>
 </template>
 
@@ -24,6 +23,7 @@ const products = reactive([
     max: 1,
     image: './homeless.png',
     amount: 0,
+    maxStatus: false,
   },
   {
     name: 'cruise ship',
@@ -31,6 +31,7 @@ const products = reactive([
     max: 50,
     image: './cruise ship.avif',
     amount: 0,
+    maxStatus: false,
   },
   {
     name: 'skyscraper',
@@ -38,6 +39,7 @@ const products = reactive([
     max: 50,
     image: '/skyscraper.png',
     amount: 0,
+    maxStatus: false,
   },
   {
     name: 'mona lisa',
@@ -45,6 +47,7 @@ const products = reactive([
     max: 1,
     image: '/mona lisa.png',
     amount: 0,
+    maxStatus: false,
   },
   {
     name: 'mansion',
@@ -52,6 +55,7 @@ const products = reactive([
     max: 50,
     image: '/mansion.png',
     amount: 0,
+    maxStatus: false,
   },
   {
     name: 'helicopter',
@@ -59,6 +63,7 @@ const products = reactive([
     max: 100,
     image: '/helicopter.webp',
     amount: 0,
+    maxStatus: false,
   },
   {
     name: 'yacht',
@@ -66,6 +71,7 @@ const products = reactive([
     max: 50,
     image: '/yacht.png',
     amount: 0,
+    maxStatus: false,
   },
   {
     name: 'mcdonalds restaurant',
@@ -73,6 +79,7 @@ const products = reactive([
     max: 100,
     image: '/mcdonalds.png',
     amount: 0,
+    maxStatus: false,
   },
   {
     name: 'gold bar',
@@ -80,6 +87,7 @@ const products = reactive([
     max: 1000,
     image: '/gold.png',
     amount: 0,
+    maxStatus: false,
   },
   {
     name: 'house',
@@ -87,6 +95,7 @@ const products = reactive([
     max: 100,
     image: '/house.webp',
     amount: 0,
+    maxStatus: false,
   },
   {
     name: 'ferrari',
@@ -94,6 +103,7 @@ const products = reactive([
     max: 100,
     image: '/ferrari.png',
     amount: 0,
+    maxStatus: false,
   },
   {
     name: 'tesla',
@@ -101,6 +111,7 @@ const products = reactive([
     max: 100,
     image: '/tesla.webp',
     amount: 0,
+    maxStatus: false,
   },
   {
     name: 'rolex',
@@ -108,6 +119,7 @@ const products = reactive([
     max: 1000,
     image: '/rolex.webp',
     amount: 0,
+    maxStatus: false,
   },
   {
     name: 'jet ski',
@@ -115,6 +127,7 @@ const products = reactive([
     max: 100,
     image: '/jetski.avif',
     amount: 0,
+    maxStatus: false,
   },
   {
     name: 'diamond ring',
@@ -122,6 +135,7 @@ const products = reactive([
     max: 1000,
     image: '/diamond_ring.png',
     amount: 0,
+    maxStatus: false,
   },
   {
     name: 'luxury wine',
@@ -129,6 +143,7 @@ const products = reactive([
     max: 5000,
     image: '/wine.png',
     amount: 0,
+    maxStatus: false,
   },
   {
     name: 'hot tub',
@@ -136,6 +151,7 @@ const products = reactive([
     max: 1000,
     image: '/hottub.webp',
     amount: 0,
+    maxStatus: false,
   },
   {
     name: 'designer bag',
@@ -143,6 +159,7 @@ const products = reactive([
     max: 5000,
     image: '/birkin.webp',
     amount: 0,
+    maxStatus: false,
   },
   {
     name: 'puppy',
@@ -150,6 +167,7 @@ const products = reactive([
     max: 100,
     image: '/puppy.png',
     amount: 0,
+    maxStatus: false,
   },
   {
     name: 'kitten',
@@ -157,6 +175,7 @@ const products = reactive([
     max: 100,
     image: '/kitten.webp',
     amount: 0,
+    maxStatus: false,
   },
   {
     name: 'phone',
@@ -164,6 +183,7 @@ const products = reactive([
     max: 100,
     image: '/phone.avif',
     amount: 0,
+    maxStatus: false,
   },
   {
     name: 'bike',
@@ -171,6 +191,7 @@ const products = reactive([
     max: 1000,
     image: '/bike.webp',
     amount: 0,
+    maxStatus: false,
   },
   {
     name: 'gaming console',
@@ -178,6 +199,7 @@ const products = reactive([
     max: 100,
     image: '/ps5.webp',
     amount: 0,
+    maxStatus: false,
   },
   {
     name: 'airpods',
@@ -185,6 +207,7 @@ const products = reactive([
     max: 1000,
     image: '/airpods.avif',
     amount: 0,
+    maxStatus: false,
   },
   {
     name: 'air jordans',
@@ -192,6 +215,7 @@ const products = reactive([
     max: 5000,
     image: '/jordans.avif',
     amount: 0,
+    maxStatus: false,
   },
 ])
 </script>
@@ -222,6 +246,6 @@ h2 {
 
 body {
   background-image: url('/starrybg.png');
-  color: #023173;
+  color: white;
 }
 </style>
